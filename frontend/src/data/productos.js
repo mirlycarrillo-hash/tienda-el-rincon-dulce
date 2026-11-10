@@ -1,0 +1,58 @@
+export const categorias = ['Todos', 'Tortas', 'Mini Donuts', 'Galletas', 'Combos']
+
+export const productos = [
+  {
+    id: 1,
+    nombre: 'Torta de Chocolate',
+    descripcion: 'Bizcocho húmedo de chocolate con ganache y fresas frescas.',
+    precio: 65.0,
+    categoria: 'Tortas',
+    imagen: '/img/torta-chocolate.jpg',
+    stock: 5,
+  },
+  {
+    id: 2,
+    nombre: 'Torta Tres Leches',
+    descripcion: 'Clásica torta tres leches con crema chantilly y canela.',
+    precio: 58.0,
+    categoria: 'Tortas',
+    imagen: '/img/torta-tres-leches.jpg',
+    stock: 3,
+  },
+  {
+    id: 3,
+    nombre: 'Mini Donuts Glaseados',
+    descripcion: 'Caja de 12 mini donuts con glaseado de colores.',
+    precio: 22.5,
+    categoria: 'Mini Donuts',
+    imagen: '/img/donuts-glaseados.jpg',
+    stock: 12,
+  },
+  {
+    id: 4,
+    nombre: 'Mini Donuts Rellenos',
+    descripcion: 'Caja de 8 mini donuts rellenos de manjar blanco.',
+    precio: 25.0,
+    categoria: 'Mini Donuts',
+    imagen: '/img/donuts-rellenos.jpg',
+    stock: 0,
+  },
+  {
+    id: 5,
+    nombre: 'Galletas Decoradas',
+    descripcion: 'Set de 6 galletas de mantequilla con diseños personalizados.',
+    precio: 30.0,
+    categoria: 'Galletas',
+    imagen: '/img/galletas-decoradas.jpg',
+    stock: 20,
+  },
+  {
+    id: 6,
+    nombre: 'Combo Cumpleaños',
+    descripcion: 'Torta mediana, 12 mini donuts y 6 galletas decoradas.',
+    precio: 110.0,
+    categoria: 'Combos',
+    imagen: '/img/combo-cumpleanos.jpg',
+    stock: 4,
+  },
+]
