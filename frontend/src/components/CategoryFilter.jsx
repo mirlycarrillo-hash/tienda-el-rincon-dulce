@@ -8,8 +8,12 @@ export default function CategoryFilter({ categorias, categoriaActiva, onSeleccio
         return (
           <Button
             key={categoria}
-            variant={activa ? 'default' : 'outline'}
-            className={activa ? 'bg-pink-600 text-white hover:bg-pink-700' : 'border-pink-200 text-stone-700 hover:bg-pink-50'}
+            variant="outline"
+            className={
+              activa
+                ? 'btn-neon'
+                : 'border-yellow-300 bg-white text-stone-700 hover:bg-yellow-50'
+            }
             onClick={() => onSeleccionar(categoria)}
           >
             {categoria}

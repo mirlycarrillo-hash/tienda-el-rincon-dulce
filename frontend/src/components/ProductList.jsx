@@ -1,8 +1,12 @@
 import ProductCard from './ProductCard'
 
-export default function ProductList({ productos }) {
+export default function ProductList({ productos, onVerDetalles }) {
   if (productos.length === 0) {
-    return <p className="py-10 text-center text-gray-500">No hay productos en esta categoría.</p>
+    return (
+      <p className="py-10 text-center text-stone-500">
+        No se encontraron productos con esos criterios.
+      </p>
+    )
   }
 
   return (
@@ -13,9 +17,13 @@ export default function ProductList({ productos }) {
           nombre={producto.nombre}
           descripcion={producto.descripcion}
           precio={Number(producto.precio)}
+          precioFinal={Number(producto.precio_final)}
+          descuento={producto.descuento}
+          destacado={producto.destacado}
           imagen={producto.imagen}
           categoria={producto.categoria.nombre}
           stock={producto.stock}
+          onVerDetalles={() => onVerDetalles(producto)}
         />
       ))}
     </div>

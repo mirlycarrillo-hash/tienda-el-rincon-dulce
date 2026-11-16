@@ -129,3 +129,33 @@
     @apply font-sans;
     }
 }
+
+/* ===== Botones neón amarillos ===== */
+.btn-neon {
+  background-color: #fff44f !important;
+  color: #1c1917 !important;
+  font-weight: 700;
+  border: 2px solid #fff44f !important;
+  box-shadow:
+    0 0 6px #fff44f,
+    0 0 16px rgba(255, 230, 0, 0.8),
+    0 0 30px rgba(255, 220, 0, 0.5);
+  transition: box-shadow 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-neon:hover:not(:disabled) {
+  background-color: #fffb7a !important;
+  transform: translateY(-1px);
+  box-shadow:
+    0 0 10px #fff44f,
+    0 0 26px rgba(255, 230, 0, 1),
+    0 0 48px rgba(255, 220, 0, 0.7);
+}
+
+.btn-neon:disabled {
+  background-color: #e7e5e4 !important;
+  border-color: #e7e5e4 !important;
+  color: #78716c !important;
+  box-shadow: none;
+  cursor: not-allowed;
+}

@@ -1,3 +1,6 @@
+from decimal import Decimal
+
+from django.core.validators import MaxValueValidator
 from django.db import models
 
 
@@ -22,6 +25,12 @@ class Producto(models.Model):
         on_delete=models.CASCADE,
         related_name='productos',
     )
+    descuento = models.PositiveSmallIntegerField(
+        default=0,
+        validators=[MaxValueValidator(100)],
+        help_text='Porcentaje de descuento (0 a 100)',
+    )
+    destacado = models.BooleanField(default=False)
     creado_en = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -29,3 +38,9 @@ class Producto(models.Model):
 
     def __str__(self):
         return self.nombre
+
+    @property
+    def precio_final(self):
+        if self.descuento:
+            return (self.precio * (100 - self.descuento) / 100).quantize(Decimal('0.01'))
+        return self.precio
