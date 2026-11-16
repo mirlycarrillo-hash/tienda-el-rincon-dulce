@@ -32,5 +32,12 @@ Aplicación: http://localhost:5173
 - `frontend/src/services`: llamadas a la API
 - `backend/catalogo`: modelos, serializadores, vistas y rutas
 
+## Laboratorio 14: mejoras
+- Búsqueda, orden por precio o nombre y filtro de ofertas
+- Descuentos y productos destacados
+- Gestión de inventario (admin editable, resumen y reserva que descuenta stock)
+- Recomendaciones de productos en el detalle
+- Diseño responsivo para móviles
+
 ## Autor
 Mirly Carrillo López
